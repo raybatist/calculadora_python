@@ -1,24 +1,54 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 #Calculadora em Python
 
-a = "***********************Python Calculadora***********************"
-print(a)
+print("Python Calculadora :)")
 print("")
-
 
 #informações da calculadora
-print("Selecione o número da operação dejesada:")
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x,y):
+    return x / y
+
+print("Selecione o número desejado:")
 print("")
+print("1 - Soma")
+print("2 - Subtração")
+print("3 - Multiplicação")
+print("4 - Divisão")
 print("")
-operação == ["1 - Soma", "2 - Subtração", "3 - Multiplicação","4 - Divisão"]
-for i in operação:
-    print(i)
-operação = input ('Digite a sua opção (1/2/3/4)')
-primeiro_numero = input('Digite o primeiro número')
-segundo_número = input ('Digite o segundo número')
+escolha = input("Digite sua opção (1/2/3/4): ")
+
+num1 = int(input("Digite o primeiro número: "))
+print("")
+num2 = int(input("Digite o segundo número: "))
+
+if escolha == '1':
+    print("")
+    print(num1, "+", num2, "=", add(num1,num2))
+    print("")
+
+elif escolha == '2':
+    print("")
+    print(num1, "-", num2, "=", subtract(num1,num2))
+    print("")
+
+elif escolha == '3':
+    print("")
+    print(num1, "*", num2, "=", multiply(num1,num2))
+    print("")
+
+elif escolha == '4':
+    print("")
+    print(num1, "/", num2, "=", divide(num1,num2))
+    print("")
+
+else:
+    print("Opção inválida")
 
